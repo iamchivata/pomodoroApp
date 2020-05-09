@@ -37,19 +37,32 @@
 .btnStop{
     background-color: #DC7A69;
     color: white;
-    height: 70px;
-    width: 170px;
-    font-size: 180%;
+    height: 50px;
+    width: 130px;
+    font-size: 150%;
     border-radius: 15px;
 }
 
 .btnStart{
     background-color: #3D6A3D;
     color: white;
-    height: 70px;
-    width:170px;
-    font-size: 180%;
+    height: 50px;
+    width:130px;
+    font-size: 150%;
     border-radius: 15px;
+}
+
+.btnReset{
+    background-color: purple;
+    color: white;
+    height: 50px;
+    width: 130px;
+    font-size: 150%;
+    border-radius: 15px;
+}
+
+button{
+    margin: 5px;
 }
 
 button:hover{

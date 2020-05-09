@@ -1,51 +1,51 @@
-//   this will give us the current date:
-function currentDate(){
-   
-      var date = new Date();
-      var year = date.getFullYear();
-    //   var month = date.getMonth();
-      var output = year ; 
-  
-      console.log(output);
-      document.getElementById("year").innerHTML =output;
-    
-  }
- var timerId;
-// by clicking the start button this function will work:
-  function startTimer(){
+window.onload = function(){
 
-    var countdown = 25 * 60 * 1000;
-    var timerId = setInterval(function(){
+  var countdown = 25*60*1000;
 
-    countdown -= 1000;
 
-    var min = Math.floor(countdown / (60 * 1000));
-    var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);  //correct
+    document.getElementById("start").onclick= function(){
+      window.timerId = setInterval(function(){
+     
+       countdown -= 1000;
+     
+       var min = Math.floor(countdown / (60 * 1000));
+       var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);  //correct
+     
+       if (countdown < 0) {
+        clearInterval(timerId);
+        var audio = new Audio('ding.mp3');
+        audio.play();
+      } 
 
-    if (countdown < 0) {
+      else {
+       document.getElementById("timer").innerHTML =min + " : " + sec;
+     }
+     
+       }, 1000);
+  };
 
-    //  alert("brovo you work for 25 minutes.");
-     clearInterval(timerId);
 
-   } 
-   
-  //  if(stopTimer()){
-  //     clearInterval(timerId);
-  //  }
-
-   else {
-    document.getElementById("timer").innerHTML =min + " : " + sec;
-  }
-
+ document.getElementById("pause").onclick=function(){
+  console.log("pause");
+  // clearInterval(timerId);
+  // alert("pause");
+  clearInterval(window.timerId);
+}
  
 
-    }, 1000);
+
+document.getElementById("reset").onclick= function(){
+  console.log("reset");
+  clearInterval(window.timerId);
+  countdown=25*60*1000;
+  document.getElementById("timer").innerHTML= "25:00";
+};
+
+
 }
 
-function stopTimer(){
-  console.log("stop");
-  clearInterval(this.timerId);
-}
+
+
 
  
 
