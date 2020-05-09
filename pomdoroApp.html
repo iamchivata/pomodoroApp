@@ -12,13 +12,13 @@
 <body>
     <div class="mainDiv">
         <div class="firstRow firstRow-number">
-            <div>2020</div>
-            <div>May</div>
+            <div id="year">2020</div>
+            <div id="month">May</div>
         </div>
-        <div class="secondRow">25 : 00</div>
+        <div class="secondRow" id="timer">25:00</div>
         <div class="thirdRow"> 
-            <button class="btn btnStart">START</button>
-            <button class="btn btnStop">STOP</button>
+            <button class="btn btnStart" onclick="startTimer()">START</button>
+        <button class="btn btnStop" onclick="stopTimer()">STOP</button>
         </div>
     </div>
 </body>
