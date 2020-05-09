@@ -2,7 +2,7 @@ window.onload = function(){
 
   var countdown = 25*60*1000;
 
-  
+
   var today= new Date();
   var month =today.getMonth()+1;
 
@@ -90,13 +90,13 @@ window.onload = function(){
       }, 1000);
   };
 
-
+// Pause function:
  document.getElementById("pause").onclick=function(){
   console.log("pause");
   clearInterval(window.timerId);
  }
  
-
+// Reset function:
  document.getElementById("reset").onclick= function(){
   console.log("reset");
   clearInterval(window.timerId);
