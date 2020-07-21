@@ -12,7 +12,7 @@
   width: 100%;
   margin: auto;
   background-color: #b6fcd5;
-  height: 100%;
+  height: fit-content;
   text-align: center;
 }
 
@@ -33,7 +33,12 @@
   font-size: 750%;
   font-family: billabong;
   color: #19264E;
-  padding-top: 100px;
+  padding-top: 200px;
+}
+
+.thirdRow {
+  color: white;
+  height: auto;
 }
 
 .btnStop {
