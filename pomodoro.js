@@ -1,8 +1,8 @@
 window.onload = function(){
-  var pomodoro_length = 1
+  var pomodoro_length = 25;
   var countdown = pomodoro_length *60*1000;
   var num_promodos =0;
-  var break_length = 0.5;
+  var break_length = 5;
 
   document.getElementById("timer").innerHTML= pomodoro_length +":00";
 
