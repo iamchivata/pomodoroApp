@@ -1,0 +1,11 @@
+#chart {
+  width: 1200px;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+}
+
+#barChart{
+  width: 600px;
+  height: 250px;
+}

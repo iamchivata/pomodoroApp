@@ -172,6 +172,17 @@ window.onload = function(){
      
       }, 1000);
   };
+  
+  
+  let data = [];
+  for(let i=0; i<localStorage.length; i++) {
+  let key = localStorage.key(i);
+  data.push({"label":key, "value":localStorage.getItem(key)});
+	}
+
+let myChart = new TChart("example", 600, 450, data);
+myChart.drawBarChart()
+
   }
 
 
