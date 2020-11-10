@@ -1,8 +1,10 @@
 window.onload = function(){
-  var pomodoro_length = 25;
+
+  var pomodoro_length = 25
   var countdown = pomodoro_length *60*1000;
   var num_promodos =0;
-  var break_length = 5;
+  const LARGE_BREAK = 30;
+  const SHORT_BREAK = 5
 
   document.getElementById("timer").innerHTML= pomodoro_length +":00";
 
@@ -59,7 +61,7 @@ window.onload = function(){
    }
 
     document.getElementById("date").innerHTML= today.getDate()+" "+month+" "+today.getFullYear();
-    document.getElementById("promodos").innerHTML ="Today's pomodoros: "+num_promodos ;
+    document.getElementById("promodos").innerHTML ="Today's pomodoros: " + num_promodos + "/16";
 
   // function for start timer:
   document.getElementById("start").onclick= function(){
@@ -111,10 +113,19 @@ window.onload = function(){
   break_countdown=0;
   document.getElementById("timer").innerHTML= pomodoro_length +":00";
  };
+ 
 //break function:
  function pomodoro_break(){
       console.log("time for a break");
-      document.getElementById("message").innerHTML ="Enjoy your break :)";
+	  if (num_promodos % 4 == 0){
+		  break_length = LARGE_BREAK;
+		  message = "Enjoy your LONG break :)"
+	  }
+	  else{
+			break_length = SHORT_BREAK;
+			message = "Enjoy your break :)"
+	  }
+      document.getElementById("message").innerHTML = message;
       document.getElementById("timer").innerHTML = break_length+":00"
       break_countdown=break_length*60*1000;
       window.timerId = setInterval(function(){
@@ -146,9 +157,7 @@ window.onload = function(){
      
       }, 1000);
   };
-
-}
-
+  }
 
 
 
