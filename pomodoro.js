@@ -5,57 +5,66 @@ window.onload = function(){
   var num_promodos =0;
   const LARGE_BREAK = 30;
   const SHORT_BREAK = 5
+  
+  //set number of pomodoros for today
+  var key = new Date().toISOString().split("T")[0]
+  var value = localStorage.getItem(key);
+  if (value!=null)
+  {
+	 var num_promodos = value;
+  }
 
   document.getElementById("timer").innerHTML= pomodoro_length +":00";
 
   var today= new Date();
   var month_num = today.getMonth();
+  console.log(month_num)
    switch(month_num){
-    case 1:
+    case 0:
       month="Jan";
       break;
 
-    case 2:
+    case 1:
       month="Feb";
       break;
 
-    case 3:
+    case 2:
       month="March";
       break;
 
-    case 4:
+    case 3:
       month="April";
       break;
 
-    case 5:
+    case 4:
       month="May";
       break;
 
-    case 6:
+    case 5:
       month="Jun";
       break;
     
-    case 7:
+    case 6:
       month="July"
       break;
      
-    case 8:
+    case 7:
       month="Aug";
       break;
 
-    case 9:
+    case 8:
       month="Sep";
       break;
       
-    case 10:
+    case 9:
       month="Oct";
       break;
       
-    case 11:
+    case 10:
       month="Nov";
       break;
       
-    case 12:
+    case 11:
       month="Dec";
       break;
    }
@@ -116,6 +125,12 @@ window.onload = function(){
  
 //break function:
  function pomodoro_break(){
+	 
+	var key = new Date().toISOString().split("T")[0]
+	var value = localStorage.getItem(key);
+	localStorage.setItem(key, num_promodos);
+  
+	 
       console.log("time for a break");
 	  if (num_promodos % 4 == 0){
 		  break_length = LARGE_BREAK;
