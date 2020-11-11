@@ -180,7 +180,7 @@ window.onload = function(){
   data.push({"label":key, "value":localStorage.getItem(key)});
 	}
 
-let myChart = new TChart("example", 600, 450, data);
+let myChart = new TChart("chart", 600, 450, data);
 myChart.drawBarChart()
 
   }

@@ -31,7 +31,6 @@ class TChart {
 
     //Label Configurations
     this.fontRatio = 2.5; //In term of percentage
-    this.fontFamily = "times";
     this.fontStyle = "normal";
     this.fontWeight = "300";
     this.fontColor = "darkgrey";
@@ -139,7 +138,7 @@ class TChart {
   drawVerticalLabels() {
 
     //text specifications
-    let labelFont = this.fontStyle + " " + this.fontWeight + " " + this.verticalFontSize + "px " + this.fontFamily
+    let labelFont = this.fontStyle + " " + this.fontWeight + " " + this.verticalFontSize + "px " 
     this.context.font = labelFont
     this.context.fillStyle = this.fontColor
     this.context.textAlign = "right"
@@ -177,7 +176,7 @@ class TChart {
 
   drawHorizontalLabels() {
     //text specifications
-    let labelFont = this.fontStyle + " " + this.fontWeight + " " + this.verticalFontSize + "px " + this.fontFamily
+    let labelFont = this.fontStyle + " " + this.fontWeight + " " + this.verticalFontSize + "px "
     this.context.font = labelFont
     this.context.fillStyle = this.fontColor
     this.context.textAlign = "center"

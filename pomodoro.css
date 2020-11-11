@@ -11,9 +11,9 @@
   position: fixed;
   width: 100%;
   margin: auto;
-  background-color: #b6fcd5;
   height: fit-content;
   text-align: center;
+  background: #eee;
 }
 
 .firstRow {
@@ -26,23 +26,27 @@
 .firstRow-number {
   font-size: 600%;
   font-family: billabong;
-  color: white;
 }
 
 .secondRow {
   font-size: 750%;
-  font-family: billabong;
   color: #19264E;
   padding-top: 200px;
 }
 
 .thirdRow {
-  color: white;
+  color: #19264E;
   height: auto;
 }
 
+.forthRow {
+  color: #19264E;
+  height: auto;
+}
+
+
 .btnStop {
-  background-color: #DC7A69;
+  background-color: #dc7a69;
   color: white;
   height: 50px;
   width: 130px;
@@ -60,7 +64,7 @@
 }
 
 .btnReset {
-  background-color: purple;
+  background-color: #31708f;
   color: white;
   height: 50px;
   width: 130px;
