@@ -181,7 +181,6 @@ window.onload = function(){
 }
 
 chart = document.getElementById("chart");
-console.log(chart.offsetHeight, chart.offsetWidth)
 let myChart = new TChart("chart",chart.offsetWidth, chart.offsetHeight,data);
 myChart.drawBarChart()
 
