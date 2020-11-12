@@ -178,9 +178,11 @@ window.onload = function(){
   for(let i=0; i<localStorage.length; i++) {
   let key = localStorage.key(i);
   data.push({"label":key, "value":localStorage.getItem(key)});
-	}
+}
 
-let myChart = new TChart("chart", 600, 450, data);
+chart = document.getElementById("chart");
+console.log(chart.offsetHeight, chart.offsetWidth)
+let myChart = new TChart("chart",chart.offsetWidth, chart.offsetHeight,data);
 myChart.drawBarChart()
 
   }

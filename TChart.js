@@ -15,7 +15,7 @@
 
 class TChart {
   constructor(targetId, width, height, data) {
-
+    console.log(data);
     //Canvas Specification came from outside
     this.id = targetId;
     this.width = width;

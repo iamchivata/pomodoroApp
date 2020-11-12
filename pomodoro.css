@@ -2,36 +2,49 @@
   font-family: billabong;
   src: url("billabong-cufonfonts-webfont/Billabong.woff") format("woff");
 }
-
+* {
+  box-sizing:border-box;
+}
 .mainDiv {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 2fr 5fr 3fr;
-      grid-template-rows: 2fr 5fr 3fr;
   position: fixed;
   width: 100%;
   margin: auto;
   height: fit-content;
   text-align: center;
   background: #eee;
+  display:grid;
 }
 
 .firstRow {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-.firstRow-number {
-  font-size: 600%;
+  font-size: 6vw;
   font-family: billabong;
 }
 
+.firstRow-left {
+
+  float: left;
+  padding: 10px;
+}
+
+.firstRow-right {
+
+  padding: 10px;
+  float: right;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:700px) {
+  .firstRow-left, .firstRow-right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+	font-size:30px;
+  }
+}
+
 .secondRow {
-  font-size: 750%;
+  font-size: 7.5vw;
   color: #19264E;
-  padding-top: 200px;
+  padding:10px;
+
 }
 
 .thirdRow {
@@ -41,7 +54,7 @@
 
 .forthRow {
   color: #19264E;
-  height: auto;
+  min-height: 30%;
 }
 
 
@@ -49,27 +62,38 @@
   background-color: #dc7a69;
   color: white;
   height: 50px;
-  width: 130px;
-  font-size: 150%;
+  width: 15%;
+  font-size: 1.5vw;
   border-radius: 15px;
+  float:center;
 }
 
 .btnStart {
   background-color: #3D6A3D;
   color: white;
   height: 50px;
-  width: 130px;
-  font-size: 150%;
+  width: 15%;
+  font-size: 1.5vw;
   border-radius: 15px;
+  float:center;
 }
 
 .btnReset {
   background-color: #31708f;
   color: white;
   height: 50px;
-  width: 130px;
-  font-size: 150%;
+  width: 15%;
+  font-size: 1.5vw;
   border-radius: 15px;
+  float:center;
+
+}
+@media screen and (max-width:600px) {
+  .btnReset,.btnStop ,.btnStart {
+    width:60%; /* The width is 100%, when the viewport is 800px or smaller */
+	font-size : 20px;
+
+  }
 }
 
 button {
