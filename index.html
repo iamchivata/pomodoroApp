@@ -5,22 +5,32 @@
     <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.css">
     <link rel="stylesheet" href="pomodoro.css">
     <script src="pomodoro.js"></script>
+	<script src="TChart.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="mainDiv">
-        <div class="firstRow firstRow-number">
-            <div id="year"></div>
-            <div id="month"></div>
+        <div class="firstRow">
+            <div class="firstRow-left" id="date"></div>
+			<div class="firstRow-right"  id="promodos"></div>
         </div>
-        <div class="secondRow" id="timer">25:00</div>
+
+        <div class="secondRow">
+		<div id ="message"></div>
+		<div id="timer"></div>
+		</div>
         <div class="thirdRow"> 
             <button class="btn btnStart" id="start">START</button>
             <button class="btn btnStop" id="pause">PAUSE</button>
             <button class=" btn btnReset" id="reset">RESET</button>
         </div>
+		
+		<div class="forthRow" id="chart">
+		</div>
     </div>
 </body>
 </html>
